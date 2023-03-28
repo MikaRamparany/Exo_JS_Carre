@@ -9,7 +9,7 @@ body{
 
 container{
     width: 430px;
-    height: 430px;
+    height: 420px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -17,6 +17,7 @@ container{
 }
 
 .carre{
+    
     height: 200px;
     width: 200px;
     background-color: rgb(124, 204, 4);
@@ -25,10 +26,33 @@ container{
     align-items: center;
     justify-content: center;
     color: aliceblue;
+    opacity: 0;
+    animation: apparition 0.75s 2.3S ease-out forwards ;
+    transition: all 0.5s ease forwards;
+    
 }
 
 .carre p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: aliceblue;
     font-weight: 500;
     font-size: 28px;
+    
+}
+
+.carre.active{
+    background-color: red;
+    transform: scale(90%) ;
+    transform : rotate(360deg);
+    transition: 0.7s ;
+   
+}
+
+
+@keyframes apparition {
+    100%{
+    opacity: 1;
+    transform : none;}
 }
