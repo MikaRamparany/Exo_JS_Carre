@@ -27,8 +27,9 @@ container{
     justify-content: center;
     color: aliceblue;
     opacity: 0;
-    animation: apparition 0.75s 2.3S ease-out forwards ;
-    transition: all 0.5s ease forwards;
+    transform: scale(1)translateX(-300%) rotate(360deg);
+    animation: apparition 0.75s 2.3S ease-out forwards;
+    transition: all 0.5s ;
     
 }
 
@@ -43,10 +44,12 @@ container{
 }
 
 .carre.active{
+    display: flex;
+    border-radius: 10px;
     background-color: red;
-    transform: scale(90%) ;
-    transform : rotate(360deg);
-    transition: 0.7s ;
+    rotate: 360deg;
+    transform : scale(0.9);
+    transition: all 0.5s ;
    
 }
 
